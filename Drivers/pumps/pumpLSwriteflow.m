@@ -5,7 +5,7 @@ function pumpLSwriteflow(pumpObj, flow)
 %   Flowrate is given in mL/min
 %   Sets the pump flowrate
 
-command = "FI" + str(100*flow);
+command = "FI" + string(10*flow);
 write(pumpObj,command,"uint8");
 
 end

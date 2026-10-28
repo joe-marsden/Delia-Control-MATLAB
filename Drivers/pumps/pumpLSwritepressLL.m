@@ -5,7 +5,7 @@ function pumpLSwritepressLL(pumpObj, press)
 %   Pressure is given in BAR
 %   Sets lower pressure limit for the pump
 
-command = "LP" + string(10*press);
+command = "LP" + string(press * 14.504);
 write(pumpObj,command,"uint8");
 
 end

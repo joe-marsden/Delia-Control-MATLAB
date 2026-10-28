@@ -5,7 +5,7 @@ function pumpObj = pumpLSconnect(COMport)
 %   COMport should be an integer
 %   Connects and returns pump object
 
-serialPort = sprintf('COM%d', com)
+serialPort = sprintf('COM%d', COMport)
 pumpObj = serialport(serialPort,9600);
 
 end

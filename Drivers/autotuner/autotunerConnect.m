@@ -9,16 +9,12 @@ homerObj = serialport(serialPort, 115200);
 
 pause(1)
 
-% Send server reset request if data is streaming
+% Send stop measuring command if data is streaming
 if homerObj.NumBytesAvailable > 0
-    % Send server reset command
-    write(homerObj,"128, 28, 82, 83, 83, 32, 57, 55, 13, 10, 128, 80", "uint8")
+    % Send stop meas command
+    write(homerObj,[128, 18], "uint8")
 end
 
-homerObj.flush
-
-pause(5)
-
-homerObj.NumBytesAvailable
+homerObj.flush;
 
 end

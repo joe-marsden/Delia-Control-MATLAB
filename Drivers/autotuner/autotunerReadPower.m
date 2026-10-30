@@ -23,5 +23,5 @@ reflectionbytes = received(11:14)
 forwardPower = (incidentbytes(2)+256*incidentbytes(1))^(incidentbytes(3)-10);
 
 % Calculate reflected power
-reflectedPower = forwardpower * ( ( (reflectionbyes(1) + 256 * reflectionbytes(2))/4096 )^2 + ( (reflectiobytes(3) + 256 * reflectionbytes(4))/4096 )^2 );
+reflectedPower = forwardPower * ( ( (reflectionbytes(1) + 256 * reflectionbytes(2))/4096 )^2 + ( (reflectionbytes(3) + 256 * reflectionbytes(4))/4096 )^2 );
 end

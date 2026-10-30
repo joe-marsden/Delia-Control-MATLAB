@@ -1,16 +1,8 @@
-function [outputArg1,outputArg2] = autotunerOneStepTune(inputArg1,inputArg2)
-%AUTOTUNERONESTEPTUNE Summary of this function goes here
-%   Detailed explanation goes here
-arguments (Input)
-    inputArg1
-    inputArg2
-end
+function autotunerOneStepTune(homerObj)
+%AUTOTUNERONESTEPTUNE Perform a one step tune for the homer
+%   J Marsden 30/10/2026
+%   homerObj is a valid serial object
 
-arguments (Output)
-    outputArg1
-    outputArg2
-end
+write(homerObj,[128, 28, 65, 84, 67, 32, 83, 13, 10, 128, 72], "uint8")
 
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
 end

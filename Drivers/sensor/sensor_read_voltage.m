@@ -4,7 +4,7 @@ function voltage = sensor_read_voltage(sensorObj)
 
     writeline(sensorObj, "MEASURE");
     response = readline(sensorObj);
-    % disp(response)
+    %disp(response)
 
     voltage = sscanf(response, "V %f");
 

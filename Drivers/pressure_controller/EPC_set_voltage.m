@@ -16,6 +16,6 @@ function EPC_set_voltage(epcObj, channel, voltage)
 
     response = readline(epcObj);
 
-    disp(response);
+    %disp(response);
 
 end

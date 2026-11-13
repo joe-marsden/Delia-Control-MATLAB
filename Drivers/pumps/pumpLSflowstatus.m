@@ -1,0 +1,18 @@
+function flowstatus = pumpLSflowstatus(pumpObj)
+%PUMPLSLEAKSTATUS Get current status of the pump to check if it's flowing
+%   J Marsden 13/11/2026
+%   Input is a pump object created using pumpLSconnect
+%   Gets the status in the format: 0 - not running, 1 - running
+%   pumplsOutput is a string
+
+flush(pumpObj)
+write(pumpObj,"CS","string");
+pause(0.1)
+allstatus = read(pumpObj,27,"char");
+
+if allstatus(end) == "/"
+    flowstatus = string(allstatus(24));
+else
+    flowstatus = string(allstatus(25));
+end
+
